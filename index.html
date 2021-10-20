@@ -4,7 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Rock, Paper, Scissor</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<title>Rock, Paper, Scissors</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="scripts.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="container">
+			<header>
+				<h1>
+					<span>Rock</span>
+					<span>Paper</span>
+					<span>Scissors</span>
+				</h1>
+				<div class="score-container">
+					<h4>Score</h4>
+					<p id="score" class="score">0</p>
+				</div>
+			</header>
+
+			<main>
+				<button class="btn-circle">
+					<img src="./images/icons8-hand-rock-100.png" alt="rock icon" />
+				</button>
+				<button class="btn-circle">
+					<img src="./images/icons8-hand-100.png" alt="paper icon" />
+				</button>
+				<button class="btn-circle">
+					<img
+						src="./images/icons8-hand-scissors-100.png"
+						alt="scissors icon"
+					/>
+				</button>
+			</main>
+
+			<div class="rules">
+				<button class="btn-rules">Rules</button>
+			</div>
+		</div>
+	</body>
 </html>
