@@ -24,12 +24,21 @@
 				</h1>
 				<div class="score-container">
 					<h4>Score</h4>
-					<p id="score" class="score">0</p>
+					<p class="score">0</p>
 				</div>
 			</header>
 
 			<div class="rules">
-				<button class="rules__btn">Rules</button>
+				<button class="rules__btn" onClick="openBtn()">Rules</button>
+			</div>
+
+			<div class="rules-modal">
+				<div class="modal">
+					<img src="./images//rps-rules.png" alt="game rules" />
+					<button class="close" onClick="closeBtn()">
+						<img src="./images/close.png" alt="close button" />
+					</button>
+				</div>
 			</div>
 
 			<div class="main start">
@@ -74,7 +83,7 @@
 				<div class="referee">
 					<div class="decision">
 						<div class="contest__title">YOU WIN</div>
-						<div class="newGame">Play Again</div>
+						<div class="newGame" onclick="restartGame()">Play Again</div>
 					</div>
 				</div>
 
