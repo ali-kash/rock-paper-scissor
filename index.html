@@ -12,7 +12,7 @@
 		/>
 		<title>Rock, Paper, Scissors</title>
 		<link rel="stylesheet" href="styles.css" />
-		<script src="scripts.js"></script>
+		<script src="scripts.js" defer></script>
 	</head>
 	<body>
 		<div class="container">
@@ -28,29 +28,66 @@
 				</div>
 			</header>
 
-			<main>
-				<button class="btn-circle btn-rock">
-					<span class="btn__wrapper">
-						<img src="./images/icons8-hand-rock-100.png" alt="rock icon" />
-					</span>
-				</button>
-				<button class="btn-circle btn-paper">
-					<span class="btn__wrapper">
-						<img src="./images/icons8-hand-100.png" alt="paper icon" />
-					</span>
-				</button>
-				<button class="btn-circle btn-scissors">
-					<span class="btn__wrapper">
-						<img
-							src="./images/icons8-hand-scissors-100.png"
-							alt="scissors icon"
-						/>
-					</span>
-				</button>
-			</main>
-
 			<div class="rules">
 				<button class="rules__btn">Rules</button>
+			</div>
+
+			<div class="main start">
+				<div id="rock" onClick="pickUserHand('rock')">
+					<button class="btn rock">
+						<span class="btn__wrapper">
+							<img src="./images/icons8-hand-rock-100.png" alt="rock icon" />
+						</span>
+					</button>
+				</div>
+				<div id="paper" onClick="pickUserHand('paper')">
+					<button class="btn paper">
+						<span class="btn__wrapper">
+							<img src="./images/icons8-hand-100.png" alt="paper icon" />
+						</span>
+					</button>
+				</div>
+				<div id="scissors" onClick="pickUserHand('scissors')">
+					<button class="btn scissors">
+						<span class="btn__wrapper">
+							<img
+								src="./images/icons8-hand-scissors-100.png"
+								alt="scissors icon"
+							/>
+						</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="main contest">
+				<div class="userhand">
+					<div class="contest__title">YOU PICKED</div>
+					<div class="userPickImage">
+						<button class="btn rock" id="userPickImage">
+							<span class="btn__wrapper">
+								<img src="./images/icons8-hand-rock-100.png" alt="rock icon" />
+							</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="referee">
+					<div class="decision">
+						<div class="contest__title">YOU WIN</div>
+						<div class="newGame">Play Again</div>
+					</div>
+				</div>
+
+				<div class="househand">
+					<div class="contest__title">HOUSE PICKED</div>
+					<div class="compPickImage">
+						<button class="btn paper">
+							<span class="btn__wrapper">
+								<img src="./images/icons8-hand-100.png" alt="paper icon" />
+							</span>
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

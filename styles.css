@@ -57,28 +57,16 @@ header h1 {
 	font-weight: 700;
 }
 
-main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	width: 300px;
-	height: 300px;
-	margin: 2rem auto;
-}
-
-.btn-circle {
+.btn {
 	border-radius: 50%;
 	height: 125px;
 	width: 125px;
 	border: none;
 	transition: transform 2s ease-in-out;
-}
-.btn-circle:hover {
 	cursor: pointer;
 }
 
-.btn-circle:hover img {
+.btn:hover {
 	transform: scale(1.2);
 }
 
@@ -93,39 +81,119 @@ main {
 	align-items: center;
 }
 
-.btn-circle img {
+.btn img {
 	width: 50px;
 	height: 50px;
 }
 
-.btn-rock {
+.btn.rock {
 	background: linear-gradient(to bottom, #59515e, #c5c6d0);
 	transition: all 0.2s;
 }
-// .btn-rock:hover {
-// 	background: linear-gradient(to bottom, #c5c6d0, #59515e);
-// }
 
-.btn-paper {
+.btn.paper {
 	background: linear-gradient(to bottom, #151e3d, #0492c2);
 	transition: all 0.2s;
 }
-// .btn-paper:hover {
-// 	background: linear-gradient(to bottom, #0492c2, #151e3d);
-// }
 
-.btn-scissors {
+.btn.scissors {
 	background: linear-gradient(to bottom, #690c07, #e3242b);
 	transition: all 0.2s;
 }
-// .btn-scissors:hover {
-// 	background: linear-gradient(to bottom, #e3242b, #690c07);
-// }
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 2rem auto;
+}
+
+.start {
+	width: 300px;
+	height: 300px;
+	justify-content: space-around;
+}
+
+.contest {
+	display: none;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.userhand,
+.househand,
+.decision {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contest__title {
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+.decision .contest__title {
+	font-weight: 600;
+}
+
+.contest .btn {
+	height: 150px;
+	width: 150px;
+}
+
+.contest .btn__wrapper {
+	height: 135px;
+	width: 135px;
+}
+
+.contest .btn img {
+	width: 75px;
+	height: 75px;
+}
+
+.newGame {
+	background-color: white;
+	color: #1f3756;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 8px 25px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.newGame:hover {
+	background-color: #1f3756;
+	color: #fff;
+}
+
+@media screen and (max-width: 559px) {
+	.contest {
+		flex-direction: column;
+	}
+	.userhand,
+	.househand,
+	.referee {
+		margin-bottom: 2rem;
+	}
+	.decision {
+		flex-direction: row;
+	}
+	.decision .contest__title {
+		margin-bottom: 0;
+		margin-right: 2rem;
+	}
+}
 
 .rules {
 	display: flex;
-	justify-content: end;
-	align-items: flex-end;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
 }
 
 .rules__btn {
@@ -139,6 +207,7 @@ main {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: all 0.2s;
+	cursor: pointer;
 }
 
 .rules__btn:hover {
