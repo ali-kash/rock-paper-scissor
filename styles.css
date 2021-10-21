@@ -7,25 +7,21 @@
 }
 
 body {
-	background: radial-gradient(
-		circle at 50% 10%,
-		hsl(214, 47%, 23%),
-		hsl(237, 49%, 15%)
-	);
+	background: radial-gradient(circle at 50% 10%, #1f3756, #141439);
 	min-height: 100vh;
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	color: white;
 }
 
 .container {
-	width: 500px;
-	max-width: 100%;
+	width: 100%;
+	max-width: 600px;
 	margin: 0 auto;
-	padding-top: 2rem;
+	padding: 2rem 1rem;
 }
 
 header {
-	border: 3px solid hsl(217, 16%, 45%);
+	border: 3px solid #606e85;
 	display: flex;
 	justify-content: space-between;
 	border-radius: 10px;
@@ -59,4 +55,93 @@ header h1 {
 	margin: 0;
 	font-size: 3rem;
 	font-weight: 700;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	margin: 2rem auto;
+}
+
+.btn-circle {
+	border-radius: 50%;
+	height: 125px;
+	width: 125px;
+	border: none;
+	transition: transform 2s ease-in-out;
+}
+.btn-circle:hover {
+	cursor: pointer;
+}
+
+.btn-circle:hover img {
+	transform: scale(1.2);
+}
+
+.btn__wrapper {
+	background-color: #fff;
+	width: 105px;
+	height: 105px;
+	display: inline-block;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-circle img {
+	width: 50px;
+	height: 50px;
+}
+
+.btn-rock {
+	background: linear-gradient(to bottom, #59515e, #c5c6d0);
+	transition: all 0.2s;
+}
+// .btn-rock:hover {
+// 	background: linear-gradient(to bottom, #c5c6d0, #59515e);
+// }
+
+.btn-paper {
+	background: linear-gradient(to bottom, #151e3d, #0492c2);
+	transition: all 0.2s;
+}
+// .btn-paper:hover {
+// 	background: linear-gradient(to bottom, #0492c2, #151e3d);
+// }
+
+.btn-scissors {
+	background: linear-gradient(to bottom, #690c07, #e3242b);
+	transition: all 0.2s;
+}
+// .btn-scissors:hover {
+// 	background: linear-gradient(to bottom, #e3242b, #690c07);
+// }
+
+.rules {
+	display: flex;
+	justify-content: end;
+	align-items: flex-end;
+}
+
+.rules__btn {
+	border: 2px solid #fff;
+	border-radius: 10px;
+	background-color: transparent;
+	color: #fff;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 8px 25px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.2s;
+}
+
+.rules__btn:hover {
+	background-color: white;
+	color: #1f3756;
 }
